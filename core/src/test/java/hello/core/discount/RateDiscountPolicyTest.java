@@ -1,6 +1,5 @@
 package hello.core.discount;
 
-import org.assertj.core.api.Assertions;
 import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,7 +18,6 @@ public class RateDiscountPolicyTest {
 		Member member = new Member(1L, "memberVIP", Grade.VIP);
 		// when
 		int discount = discountPolicy.discount(member, 10000);
-		Assertions assertions;
 		// then
 		assertThat(discount).isEqualTo(1000);
 	}
